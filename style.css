@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1d23;
+    margin: 0;
+}
+
+.stopwatch {
+    position: relative;
+    width: 750px; /* Reduced width */
+    height: 250px; /* Reduced height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #2c333a, #3b444e);
+    border: 2px solid #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #ff0;
+    font-size: 1.5em; /* Reduced font size */
+    z-index: 1;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.stopwatch:hover {
+    transform: scale(1.02);
+}
+
+.buttons {
+    margin-top: 15px; /* Reduced margin */
+}
+
+.buttons button, .lap-button {
+    padding: 8px 16px; /* Reduced padding */
+    margin: 5px;
+    font-size: 0.9em; /* Reduced font size */
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.buttons button:hover, .lap-button:hover {
+    background-color: #fff;
+    color: #2f363e;
+    transform: translateY(-2px);
+}
+
+#laps-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0; /* Reduced margin */
+    color: chartreuse;
+}
+
+#laps-list li {
+    font-size: 0.9em; /* Reduced font size */
+    margin: 5px 0;
+    transition: transform 0.2s;
+}
+
+#laps-list li:hover {
+    transform: translateX(10px);
+}
